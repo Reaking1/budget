@@ -3,7 +3,7 @@ export default class BudgetTracker {
         this.root = document.querySelector(querySelectorString);
         this.root.innerHTML = BudgetTracker.html();
   
-  
+    //the browser does not recongise this  line of code
         this.root.querySelector(".new-entry").addEventListener("click", () => {
           this.onNewEntryBtnClick();
       });
@@ -29,7 +29,7 @@ export default class BudgetTracker {
           <tbody>
               <tr>
                   <td colspan="5" class="controls">
-                      <button type="button" class="new-button entry">New Entry</button>
+                      <button type="button" class="new-button new-entry">New Entry</button>
                   </td>
               </tr>
           </tbody>
@@ -112,15 +112,17 @@ export default class BudgetTracker {
      }
   
      getEntryRows(){
-  
+            
      }
   
-     onNewEntryBtnClick(){
-       this.addEntry();
-     }
+     onNewEntryBtnClick() {
+        this.addEntry();
+      }
+      
   
   
      onDeleteEntryBtnClick(e){
-  
+         e.target.closest("tr").remove();
+         this.save();
      }
   }
