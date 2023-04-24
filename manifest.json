@@ -1,0 +1,24 @@
+{
+    "name":"Budget Tracker",
+    "short_name":"PWA",
+    "start_url":"index.html",
+    "display":"standalone",
+    "background_color":"#5900b3",
+    "theme_color":"#ffff",
+    "scope": ".",
+    "description":"This is a todo list app",
+    "icons":[
+    {
+    "src":"images/icon2.png",                     
+    "sizes":"199x192",
+    "type":"images/png",
+    "purpose" : "any"
+    },
+    {
+    "src":"images/skull.png",
+    "sizes":"512x512",
+    "type":"images/png",
+    "purpose" : "maskable"
+    }
+  ]
+}

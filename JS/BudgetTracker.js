@@ -87,9 +87,9 @@ export default class BudgetTracker {
             return total + (amount * modifier);
         }, 0);
 
-        const totalFormatted = new Intl.NumberFormat("en-US", {
+        const totalFormatted = new Intl.NumberFormat("en-GB", {
             style: "currency",
-            currency: "USD"
+            currency: "GBP"
         }).format(total);
 
         this.root.querySelector(".total").textContent = totalFormatted;
